@@ -1,23 +1,15 @@
-import "./App.css";
-import Post from "./Components/Post/Post";
+import React from 'react'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import Home from './pages/Home'
+import Registration from './pages/Registration'
 
-function App() {
-  return (
-    <main>
-      <header>
-        <a href="" className="logo">
-          Virtual DOMinators Blog
-        </a>
-        <nav>
-          <a href="">Login</a>
-          <a href="">Register</a>
-        </nav>
-      </header>
-      <Post />
-      <Post />
-      <Post />
-    </main>
-  );
-}
+const App = () => (
+  <Router>
+    <Routes>
+      <Route path="" element={<Home />} />
+      <Route path="/register" element={<Registration />} />
+    </Routes>
+  </Router>
+)
 
-export default App;
+export default App
