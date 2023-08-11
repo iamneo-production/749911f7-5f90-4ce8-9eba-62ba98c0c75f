@@ -1,15 +1,16 @@
 import React from 'react'
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
+import Layout from './layout/Layout'
 import Home from './pages/Home'
 import Registration from './pages/Registration'
 
 const App = () => (
-  <Router>
-    <Routes>
-      <Route path="" element={<Home />} />
+  <Routes>
+    <Route path="/" element={<Layout />}>
+      <Route index element={<Home />} />
       <Route path="/register" element={<Registration />} />
-    </Routes>
-  </Router>
+    </Route>
+  </Routes>
 )
 
 export default App

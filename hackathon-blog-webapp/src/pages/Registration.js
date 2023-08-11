@@ -1,6 +1,6 @@
 import axios from 'axios'
-import "./style.css"
 import React, { useState } from 'react'
+import "./style.css"
 
 const Registration = () => {
   const [userName, setUserName] = useState(''),
@@ -32,7 +32,7 @@ const Registration = () => {
     }
 
   return (
-    <main>
+    <>
       <h2>User Registration</h2>
       {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
       <label>
@@ -53,7 +53,7 @@ const Registration = () => {
       <button onClick={handleRegistration} disabled={!validateForm()}>
         Register
       </button>
-    </main>
+    </>
   )
 }
 
