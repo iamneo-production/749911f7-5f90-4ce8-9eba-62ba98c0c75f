@@ -1,9 +1,38 @@
 {
   "posts": [
     {
+      "title": "First blog title",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id neque fermentum, varius quam sit amet, maximus felis. Quisque volutpat sed magna non sollicitudin. Phasellus et dictum nibh. Nam diam enim, molestie ut pharetra id, sagittis vitae neque. Cras vitae mattis odio. Nunc quis eleifend ipsum. Aliquam iaculis, augue sit amet aliquam venenatis, arcu ipsum dapibus sapien, quis faucibus arcu metus quis odio.\n\nDuis hendrerit purus eros, et tempus purus mollis a. Maecenas et feugiat mauris. Sed commodo ipsum sit amet odio aliquet, vel pulvinar dolor faucibus. Praesent molestie varius diam id finibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vestibulum eget mi non tellus sollicitudin aliquet in at justo. Praesent facilisis sit amet sem sit amet vulputate. Phasellus laoreet dolor et ligula tempor suscipit. Proin dignissim sagittis ante, a iaculis nulla venenatis eu.",
+      "tags": [
+        "test",
+        "hackathon",
+        "post"
+      ],
+      "date": "Sat Aug 12 2023 15:22:10",
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "author": "test user1"
+    },
+    {
+      "title": "Second blog title",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id neque fermentum, varius quam sit amet, maximus felis. Quisque volutpat sed magna non sollicitudin. Phasellus et dictum nibh. Nam diam enim, molestie ut pharetra id, sagittis vitae neque. Cras vitae mattis odio. Nunc quis eleifend ipsum. Aliquam iaculis, augue sit amet aliquam venenatis, arcu ipsum dapibus sapien, quis faucibus arcu metus quis odio.\n\nDuis hendrerit purus eros, et tempus purus mollis a. Maecenas et feugiat mauris. Sed commodo ipsum sit amet odio aliquet, vel pulvinar dolor faucibus. Praesent molestie varius diam id finibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vestibulum eget mi non tellus sollicitudin aliquet in at justo. Praesent facilisis sit amet sem sit amet vulputate. Phasellus laoreet dolor et ligula tempor suscipit. Proin dignissim sagittis ante, a iaculis nulla venenatis eu.",
+      "tags": [
+        "india",
+        "chennai"
+      ],
+      "date": "Sat Aug 12 2023 15:22:40",
+      "id": 2,
+      "author": "test user1"
+    },
+    {
+      "title": "Third blog title",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id neque fermentum, varius quam sit amet, maximus felis. Quisque volutpat sed magna non sollicitudin. Phasellus et dictum nibh. Nam diam enim, molestie ut pharetra id, sagittis vitae neque. Cras vitae mattis odio. Nunc quis eleifend ipsum. Aliquam iaculis, augue sit amet aliquam venenatis, arcu ipsum dapibus sapien, quis faucibus arcu metus quis odio.\n\nDuis hendrerit purus eros, et tempus purus mollis a. Maecenas et feugiat mauris. Sed commodo ipsum sit amet odio aliquet, vel pulvinar dolor faucibus. Praesent molestie varius diam id finibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vestibulum eget mi non tellus sollicitudin aliquet in at justo. Praesent facilisis sit amet sem sit amet vulputate. Phasellus laoreet dolor et ligula tempor suscipit. Proin dignissim sagittis ante, a iaculis nulla venenatis eu.",
+      "tags": [
+        "india",
+        "test"
+      ],
+      "date": "Sat Aug 12 2023 15:23:11",
+      "id": 3,
+      "author": "test user2"
     }
   ],
   "comments": [
