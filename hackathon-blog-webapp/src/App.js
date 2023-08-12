@@ -1,5 +1,6 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
+import CreatePost from "./components/CreatePost";
 import Home from "./components/Home";
 import Login from "./components/Login";
 import Registration from "./components/Registration";
@@ -11,6 +12,7 @@ const App = () => (
       <Route index element={<Home />} />
       <Route path="/register" element={<Registration />} />
       <Route path="/login" element={<Login />} />
+      <Route path="/createPost" element={<CreatePost/>} />
     </Route>
   </Routes>
 );
