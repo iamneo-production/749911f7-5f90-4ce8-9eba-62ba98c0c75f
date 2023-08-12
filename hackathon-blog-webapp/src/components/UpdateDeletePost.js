@@ -1,6 +1,8 @@
 import axios from "axios";
 import React, { useState } from "react";
 
+const DB_URL = process.env.REACT_APP_DB_URL
+
 const UpdateDeletePost = ({ post }) => {
   const [title, setTitle] = useState(post.title);
   const [content, setContent] = useState(post.content);
@@ -9,7 +11,7 @@ const UpdateDeletePost = ({ post }) => {
   const handleUpdate = async () => {
     try {
       const response = await axios.put(
-        `https://8080-ffccfffadcaefbecfbaffffddddabcdbfbebdb.premiumproject.examly.io/posts/${post.id}`,
+        `${DB_URL}/posts/${post.id}`,
         {
           title,
           content,
@@ -25,7 +27,7 @@ const UpdateDeletePost = ({ post }) => {
   const handleDelete = async () => {
     try {
       const response = await axios.delete(
-        `https://8080-ffccfffadcaefbecfbaffffddddabcdbfbebdb.premiumproject.examly.io/posts/${post.id}`,
+        `${DB_URL}/posts/${post.id}`,
       );
       alert("Deleted successfully");
     } catch (error) {

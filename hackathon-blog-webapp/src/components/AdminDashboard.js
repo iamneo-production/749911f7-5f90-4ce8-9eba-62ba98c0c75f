@@ -3,12 +3,13 @@ import React, { useEffect, useState } from "react";
 
 const AdminDashboard = () => {
   const [users, setUsers] = useState([]);
+  const DB_URL = process.env.REACT_APP_DB_URL
 
   useEffect(() => {
     const fetchUsers = async () => {
       try {
         const response = await axios.get(
-          "https://8080-ffccfffadcaefbecfbaffffddddabcdbfbebdb.premiumproject.examly.io/users",
+          `${DB_URL}/users`,
         );
         setUsers(response.data);
       } catch (error) {
@@ -22,7 +23,7 @@ const AdminDashboard = () => {
   const handleDeleteUser = async (userId) => {
     try {
       const response = await axios.delete(
-        `https://8080-ffccfffadcaefbecfbaffffddddabcdbfbebdb.premiumproject.examly.io/users/${userId}`,
+        `${DB_URL}/users/${userId}`,
       );
     } catch (error) {
       alert("An error occurred while deleting the user ", error);

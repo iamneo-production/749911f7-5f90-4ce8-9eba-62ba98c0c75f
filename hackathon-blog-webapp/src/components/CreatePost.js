@@ -6,14 +6,22 @@ const CreatePost = () => {
   const [content, setContent] = useState("");
   const [tags, setTags] = useState("");
 
+  const DB_URL = process.env.REACT_APP_DB_URL
+
+  const getCurrentUserName = () => {
+    //need to fetch the current user name
+    return "test user1"
+  }
   const handleCreatePost = async () => {
     try {
       const response = await axios.post(
-        "https://8080-ffccfffadcaefbecfbaffffddddabcdbfbebdb.premiumproject.examly.io/posts",
+        `${DB_URL}/posts`,
         {
           title,
           content,
           tags: tags.split(",").map((tag) => tag.trim()),
+          date: Date(),
+          author: getCurrentUserName()
         },
       );
     } catch (error) {
@@ -29,11 +37,13 @@ const CreatePost = () => {
         value={title}
         onChange={(e) => setTitle(e.target.value)}
       />
+      <br/>
       <textarea
         placeholder="Content"
         value={content}
         onChange={(e) => setContent(e.target.value)}
       />
+      <br/>
       <input
         placeholder="Tags (comma-separated)"
         value={tags}

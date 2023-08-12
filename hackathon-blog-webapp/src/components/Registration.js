@@ -2,6 +2,9 @@ import axios from "axios";
 import React, { useState } from "react";
 import "../styles/style.css";
 
+const DB_URL = process.env.REACT_APP_DB_URL
+
+
 const Registration = () => {
   const [userName, setUserName] = useState(""),
     [email, setEmail] = useState(""),
@@ -10,7 +13,7 @@ const Registration = () => {
     handleRegistration = async () => {
       try {
         const response = await axios.post(
-          "https://8080-ffccfffadcaefbecfbaffffddddabcdbfbebdb.premiumproject.examly.io/users",
+          `${DB_URL}/users`,
           {
             id: Math.floor(Math.random() * 10001),
             userName,
