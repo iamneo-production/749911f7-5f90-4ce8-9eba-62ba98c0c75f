@@ -10,8 +10,9 @@ const Registration = () => {
     handleRegistration = async () => {
       try {
         const response = await axios.post(
-          "https://8080-ffccfffadcaefbecfbaffffddddabcdbfbebdb.premiumproject.examly.io/profile",
+          "https://8080-ffccfffadcaefbecfbaffffddddabcdbfbebdb.premiumproject.examly.io/users",
           {
+            id: Math.floor(Math.random() * 10001),
             userName,
             email,
             password,

@@ -7,12 +7,13 @@ const Login = () => {
 
   const handleLogin = async () => {
     try {
-      const response = await axios.post("/api/login", {
-        userName,
-        password,
-      });
+      const response = await axios.get(
+        "https://8080-ffccfffadcaefbecfbaffffddddabcdbfbebdb.premiumproject.examly.io/users",
+      );
+      console.log(response);
+      // TODO - write logic for checking if logged in user details are available in the incoming response
     } catch (error) {
-      alert("An error occurred", error);
+      alert("An error occurred while logging in ", error);
     }
   };
 
