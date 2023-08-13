@@ -4,13 +4,12 @@ import React, { useState } from "react";
 const Login = () => {
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
-  const DB_URL = process.env.REACT_APP_DB_URL
+  const DB_URL = process.env.REACT_APP_DB_URL;
 
-  const handleLogin = async () => {
+  const handleLogin = async (e) => {
+    e.preventDefault();
     try {
-      const response = await axios.get(
-        `${DB_URL}/users`
-      );
+      const response = await axios.get(`${DB_URL}/users`);
       console.log(response);
       // TODO - write logic for checking if logged in user details are available in the incoming response
     } catch (error) {
@@ -18,8 +17,12 @@ const Login = () => {
     }
   };
 
+  const validateForm = () => {
+    return userName !== "" && password !== "";
+  };
+
   return (
-    <div>
+    <form onSubmit={handleLogin} className="login">
       <h2>Login</h2>
       <input
         type="text"
@@ -33,8 +36,10 @@ const Login = () => {
         value={password}
         onChange={(e) => setPassword(e.target.value)}
       />
-      <button onClick={handleLogin}>Login</button>
-    </div>
+      <button type="submit" disabled={!validateForm()}>
+        Login
+      </button>
+    </form>
   );
 };
 
